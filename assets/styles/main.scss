@@ -1,0 +1,147 @@
+// GENERAL
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 16px;
+  height: 100vh;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'Header Header Header Header'
+    'Aside Main Main Main'
+    'Aside Slider Slider Slider'
+    'Footer Footer Footer Footer';
+  grid-template-columns: 4em auto auto 1.375em;
+  grid-template-rows: auto auto auto auto;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-area: Header;
+  width: 100%;
+}
+
+.aside {
+  grid-area: Aside;
+}
+
+.main {
+  grid-area: Main;
+}
+
+.slider {
+  grid-area: Slider;
+}
+
+.footer {
+  grid-area: Footer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      'Header Header Header'
+      'Main Main Main'
+      'Slider Slider Slider'
+      'Footer Footer Footer';
+    grid-template-columns: auto;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      'Header'
+      'Main'
+      'Slider'
+      'Footer';
+    grid-template-columns: auto;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+}
+// _____________________________________
+
+//FONTS
+@font-face {
+  font-family: 'DrukCyrMed';
+  src: url(../../public/fonts/DrukCyr-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DrukCyrWide';
+  src: url(../../public/fonts/drukwidecyr-medium.eot),
+    url(../../public/fonts/drukwidecyr-medium.otf),
+    url(../../public/fonts/drukwidecyr-medium.woff) format('woff'),
+    url(../../public/fonts/drukwidecyr-medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../public/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NunitoBlack';
+  src: url(../../public/fonts/NunitoSans-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NunitoBold';
+  src: url(../../public/fonts/NunitoSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NunitoLight';
+  src: url(../../public/fonts/NunitoSans-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NunitoReg';
+  src: url(../../public/fonts/NunitoSans-Regular.ttf) format('truetype');
+}
+// ______________________
+
+// COLORS
+$aside-bg: #a66eff;
+$main-bg: url('./public/images/main-bg.jpeg');
+$footer-bg: #f269af;
+$header-bg: rgba(255, 255, 255, 0.75);
+$border: #5834a4;
+$btn-pink: #f269af;
+$btn-lightGreen: #abec20;
+$menuSpan: #0267ff;
+$gradien-line: linear-gradient(
+  227.56deg,
+  #fdf398 -0.59%,
+  #f7be87 22.84%,
+  #e5637d 45.63%,
+  #e84bba 65.89%,
+  #9310d8 99.13%
+);
+
+// ___________________________________________
